@@ -1,0 +1,3 @@
+1;proveedor1;proveedor1@mail.com;1.proveedor1.jpg;
+2;proveedor2;proveedor2@mail.com;2.proveedor2.jpg;
+3;proveedor3;proveedor3@mail.com;3.proveedor3.jpg;

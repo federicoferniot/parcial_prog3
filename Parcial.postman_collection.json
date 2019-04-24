@@ -1,0 +1,269 @@
+{
+	"id": "0459a078-4735-8bab-1d93-f2a52ef67794",
+	"name": "Parcial",
+	"description": "",
+	"order": [
+		"bcceacc0-7d44-110c-897c-204e4c4f880a",
+		"7a367771-ea0d-64e7-2e01-7d46e075612b",
+		"abf7e50b-c545-8baa-9b8f-2085ab0e1af1",
+		"1fbadc35-fe32-9ad3-044b-357c34754e68",
+		"8f3563de-d51f-d45e-bd1f-8134476ef49a",
+		"8345b927-8ac2-b9a6-4a8a-077d2a42b0e7"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1556066705953,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1fbadc35-fe32-9ad3-044b-357c34754e68",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": [
+				{
+					"key": "caso",
+					"value": "hacerPedido",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "producto",
+					"value": "producto2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "cantidad",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "hacerPedido",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066773730,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7a367771-ea0d-64e7-2e01-7d46e075612b",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php?caso=proveedores",
+			"queryParams": [
+				{
+					"key": "caso",
+					"value": "proveedores",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": null,
+			"dataMode": "params",
+			"name": "proveedores",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066747700,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "8345b927-8ac2-b9a6-4a8a-077d2a42b0e7",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php?caso=listarPedidoProveedor&id=1",
+			"queryParams": [
+				{
+					"key": "caso",
+					"value": "listarPedidoProveedor",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": null,
+			"dataMode": "params",
+			"name": "listarPedidoProveedor",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066797658,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "8f3563de-d51f-d45e-bd1f-8134476ef49a",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php?caso=listarPedidos",
+			"queryParams": [
+				{
+					"key": "caso",
+					"value": "listarPedidos",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": null,
+			"dataMode": "params",
+			"name": "listarPedidos",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066785794,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "abf7e50b-c545-8baa-9b8f-2085ab0e1af1",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php?caso=consultarProveedor&nombre=PROVEEDOR2",
+			"queryParams": [
+				{
+					"key": "caso",
+					"value": "consultarProveedor",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "nombre",
+					"value": "PROVEEDOR2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": null,
+			"dataMode": "params",
+			"name": "consultarProveedor",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066763322,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "bcceacc0-7d44-110c-897c-204e4c4f880a",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/pp/nexo.php",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "0459a078-4735-8bab-1d93-f2a52ef67794",
+			"data": [
+				{
+					"key": "caso",
+					"value": "cargarProveedor",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "nombre",
+					"value": "proveedor3",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "proveedor3@mail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "foto",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "cargarProveedor",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1556066734094,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
