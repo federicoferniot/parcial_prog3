@@ -10,7 +10,7 @@ class Pedido{
         $this->cantidad = $cantidad;
         $this->idProveedor = $idProveedor;
     }
-    public function toString(){
+    public function __toString(){
         $pedido = ($this->producto).";";
         $pedido .= ($this->cantidad).";";
         $pedido .= ($this->idProveedor).";";

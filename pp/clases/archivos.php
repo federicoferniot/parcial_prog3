@@ -1,12 +1,16 @@
 <?php
 
-include_once "/../clases/proveedor.php";
-include_once "/../clases/pedido.php";
+include_once "./clases/proveedor.php";
+include_once "./clases/pedido.php";
 
 class Archivo{
-    static function obtener_array_proveedores(){
+
+    private static $ruta_archivo_proveedores = "./data/proveedores.txt";
+    private static $ruta_archivo_pedidos = "./data/pedidos.txt";
+
+    public static function obtener_proveedores(){
         $array_archivo = array();
-        $archivo = fopen("data/proveedores.txt", "r");
+        $archivo = fopen(self::$ruta_archivo_proveedores, "r");
         while(!feof($archivo)){
             $proveedor_leido = trim(fgets($archivo));
             if($proveedor_leido != ""){
@@ -18,9 +22,9 @@ class Archivo{
         return $array_archivo;
     }
 
-    static function obtener_array_pedidos(){
+    public static function obtener_pedidos(){
         $array_archivo = array();
-        $archivo = fopen("data/pedidos.txt", "r");
+        $archivo = fopen(self::$ruta_archivo_pedidos, "r");
         while(!feof($archivo)){
             $pedido_leido = trim(fgets($archivo));
             if($pedido_leido != ""){
@@ -32,17 +36,35 @@ class Archivo{
         return $array_archivo;
     }
 
-    static function agregar_proveedor($proveedor){
-        $archivo = fopen("data/proveedores.txt", "a");
-        fwrite($archivo, $proveedor->toString());
+    public static function agregar_proveedor($proveedor){
+        $archivo = fopen(self::$ruta_archivo_proveedores, "a");
+        fwrite($archivo, $proveedor);
         fwrite($archivo, PHP_EOL);
         fclose($archivo);
     }
 
-    static function agregar_pedido($pedido){
-        $archivo = fopen("data/pedidos.txt", "a");
-        fwrite($archivo, $pedido->toString());
-        fwrite($archivo, PHP_EOL);
-        fclose($archivo);
+    public static function cargar_foto($origen, $destino){
+        if(file_exists("./data/fotos/".$destino)){
+            copy("./data/fotos/".$destino, "./data/fotos/backup/".(date('Y-m-d').$destino));
+        }
+        move_uploaded_file($origen, "./data/fotos/".$destino);
+    }
+
+
+    public static function modificar_proveedor($id, $nombre, $email, $foto){
+        
+    }
+
+
+    public static function agregar_pedido($pedido, $id_proveedor){
+        $array_proveedores = self::obtener_proveedores();
+        foreach($array_proveedores as $proveedor){
+            if($proveedor->id == $id_proveedor){
+                $archivo = fopen(self::$ruta_archivo_pedidos, "a");
+                fwrite($archivo, $pedido);
+                fwrite($archivo, PHP_EOL);
+                fclose($archivo);
+            }
+        }
     }
 }

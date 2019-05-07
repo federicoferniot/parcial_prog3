@@ -12,7 +12,7 @@ class Proveedor{
         $this->email = $email;
         $this->foto = $foto;
     }
-    public function toString(){
+    public function __toString(){
         $proveedor = ($this->id).";";
         $proveedor .= ($this->nombre).";";
         $proveedor .= ($this->email).";";
